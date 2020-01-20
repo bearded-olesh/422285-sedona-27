@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Алексей Жарков](https://up.htmlacademy.ru/htmlcss/27/user/422285).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Непорада](https://htmlacademy.ru/profile/maxim_neporada)
 
 ---
 
