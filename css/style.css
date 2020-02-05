@@ -41,6 +41,20 @@ a {
   text-decoration: none;
 }
 
+.button {
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  border: none; 
+}
+
+.button:active {
+  color: rgba(255,255,255, 0.3);
+}
+
+
+/* Header */
+
 .header {
   background-color: #fff
   color: #000;
@@ -56,11 +70,101 @@ a {
   color: inherit;
 }
 
+
+/* Hero */
+
 .hero {
   background-color: #e1eef6;
   background-image: url(../img/hero.jpg);
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
 }
 
+
+/* Reasons */
+
+.reasons {
+  background-color: #fff;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.reasons>strong {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.reasons>p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.reason-list,
+.attribute-list {
+  list-style: none;
+}
+
+.reason:not(:first-child) {
+  background-color: #eeeeee;
+}
+
+.reason b,
+.attribute b {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.reason p,
+.attribute p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.real-city,
+.reason:nth-child(2) {
+  color: #fff;
+  background-color: #81b3d2;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.real-city {
+  background-image: url(../img/city.jpg);
+  background-position: right center;
+}
+
+.reason:nth-child(2) {
+  background-image: url(../img/bridge.jpg);
+  background-position: left center;
+}
+
+
+/*Interested*/
+
+.interested {
+  background-color: #fff;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.interested>h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.interested>p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.interested-button {
+  background-color: #766357;
+}
+
+.interested-submit {
+  background-color: #81b3d2;
+}
