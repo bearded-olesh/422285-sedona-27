@@ -24,37 +24,70 @@
 		</header>
 
 		<main>
-			<section>
+			<section class="search-filters">
 				<form action="#">
-					<fieldset>
+					<fieldset class="infrastructure">
 						<legend>
 							Инфраструктура:
 						</legend>
-
-						<label><input type="checkbox"> Бассейн</label>
-						<label><input type="checkbox"> Праковка</label>
-						<label><input type="checkbox"> wi-fi</label>
+						
+						<ul class="checkbox-list">
+							<li class="checkbox-item">
+								<label><input type="checkbox"> Бассейн</label>
+							</li>
+							<li class="checkbox-item">
+								<label><input type="checkbox"> Праковка</label>
+							</li>
+							<li class="checkbox-item">
+								<label><input type="checkbox"> wi-fi</label>
+							</li>
+						</ul>
 					</fieldset>
 					
-					<fieldset>
+					<fieldset class="type-of-housing">
 						<legend>
 							Тип жилья:
 						</legend>
 
-						<label><input type="checkbox"> Гостиница</label>
-						<label><input type="checkbox"> Мотель</label>
-						<label><input type="checkbox"> Апартаменты</label>
+						<ul class="checkbox-list">
+							<li class="checkbox-item">
+								<label><input type="checkbox"> Гостиница</label>
+							</li>
+							<li class="checkbox-item">
+								<label><input type="checkbox"> Мотель</label>
+							</li>
+							<li class="checkbox-item">
+								<label><input type="checkbox"> Апартаменты</label>
+							</li>
+						</ul>
 					</fieldset>
+
+					<div class="cost">
+						<h3>Стоимость в сутки (р):</h3>
+
+						<div class="cost-limits">
+							<span class="cost-from">От 0</span>
+							<span class="cost-up">До 3000</span>
+						</div>
+
+						<div class="cost-range">
+							<button type="button" class="range-switch" class="button"></button>
+							<button type="button" class="range-switch" class="button"></button>
+						</div>
+
+						<button type="submit" class="button search-filters-button">Показать</button>
+					</div>
 				</form>
 			</section>
 
 			<section class="hotels">
 				<h2 class="visually-hidden">Список гостиниц</h2>
+
 				<div class="sorting">
 					<b>Найдено: 3</b>
 					<ul class="sorting-types">
 						Сортировка:
-						<li class="sorting-type">По цене</li>
+						<li class="sorting-type active">По цене</li>
 						<li class="sorting-type">По типу</li>
 						<li class="sorting-type">По рейтингу</li>
 					</ul>
@@ -63,6 +96,7 @@
 						<img src="img/icon-down-dir.svg" alt="Выбор порядка сортировки">
 					</div>
 				</div>
+
 				<ul class="hotel-list">
 					<li class="hotel">
 						<div class="hotel-info">
@@ -131,19 +165,19 @@
 			</p>
 
 			<ul class="social-networks">
-				<li  class="social-network">
+				<li class="social-network">
 					<a href="">
 						<img src="img/twitter.svg" alt="Twitter" width="20" height="20">
 					</a>
 				</li>
 
-				<li  class="social-network">
+				<li class="social-network">
 					<a href="">
 						<img src="img/facebook.svg" alt="Facebook" width="20" height="20">
 					</a>
 				</li>
 
-				<li  class="social-network">
+				<li class="social-network">
 					<a href="">
 						<img src="img/youtube.svg" alt="Youtube" width="20" height="20">
 					</a>
