@@ -103,6 +103,18 @@ a {
   color: inherit;
 }
 
+.main-nav a:hover {
+  color: #81b3d2;
+} 
+
+.main-nav a:active {
+  color: #b2b2b2;
+}
+
+.nav-item.active {
+  color: #766357;
+} 
+
 
 /* Hero */
 
@@ -273,7 +285,8 @@ a {
   list-style: none;
 }
 
-.social-network {
+.social-network a {
+  display: block;
   width: 46px;
   height: 46px;
   background-color: #81b3d2;
@@ -348,6 +361,15 @@ a {
   border-bottom: 1px dotted #81b3d2;
 }
 
+.sorting-type:hover {
+  color: #81b3d2;
+}
+
+.sorting-type:active {
+  color: #000;
+  border-color: transparent;
+}
+
 .sorting-type.active {
   color: #81b3d2;
   border-bottom: none;
@@ -377,8 +399,8 @@ a {
   line-height: 21px;
 }
 
-.button.more,
-.button.reserve {
+.more,
+.reserve {
   color: #fff;
   font-size: 14px;
   line-height: 21px;
