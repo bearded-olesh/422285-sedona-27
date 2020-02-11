@@ -323,13 +323,20 @@ a {
   font-size: 14px;
   line-height: 26px;
   color: #000;
+  text-transform: uppercase;
 }
 
 .author:hover path {
   fill: #81b3d2;
 }
+
 .author:active path {
   fill: #bdbbbc;
+}
+
+.logo-htmlacademy {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* ------------------------Hotels------------------------ */
