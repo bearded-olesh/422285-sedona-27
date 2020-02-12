@@ -468,7 +468,7 @@ a {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  padding: 30px 72px;
+  padding: 28px 72px;
 }
 
 .hotel-info {
@@ -477,11 +477,11 @@ a {
 
 .hotel-info h3 {
   font-size: 21px;
-  line-height: 21px;
+  line-height: 26px;
   font-weight: bold;
   color: #000;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .hotel-info h3:hover {
@@ -500,7 +500,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .hotel-buttons {
@@ -511,7 +511,7 @@ a {
 .reserve {
   font-size: 14px;
   line-height: 21px;
-  padding: 4px 17px;
+  padding: 3px 17px;
   vertical-align: middle;
 }
 
