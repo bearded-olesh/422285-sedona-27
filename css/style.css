@@ -470,10 +470,17 @@ a {
 
 .map {
   margin-bottom: -120px;
+  position: relative;
 }
 
 .map img {
   display: block;
+}
+
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 
@@ -844,7 +851,7 @@ input[type="checkbox"]:disabled + label {
 
 .more,
 .reserve {
-  font-size: 14px;
+  font-size: 14px;ь
   line-height: 21px;
   padding: 3px 17px;
   vertical-align: middle;
