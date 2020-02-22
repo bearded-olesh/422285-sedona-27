@@ -124,7 +124,8 @@ a {
   letter-spacing: 0.4px;
 }
 
-.nav-item.active {
+.nav-item.active,
+.nav-item.active:hover a {
   color: #766357;
 } 
 
@@ -160,6 +161,8 @@ a {
   text-transform: uppercase;
   padding-top: 60px;
   letter-spacing: 0.1px;
+  position: relative;
+  z-index: 2;
 }
 
 .reasons-header {
@@ -186,6 +189,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -279,13 +283,16 @@ a {
   background-color: #fff;
   text-transform: uppercase;
   text-align: center;
+  padding-top: 51px;
+  position: relative;
+  z-index: 2
 }
 
 .interested>h2 {
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
-  margin-top: 51px;
+  margin-top: 0;
   letter-spacing: 0.1px;
 }
 
@@ -310,19 +317,113 @@ a {
   background-color: #503e33;
 }
 
+
+/* Form */
+
+.interested-form-container {
+  position: relative;
+  z-index: 1;
+}
+
 .interested-form {
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
   font-weight: bold;
+  position: absolute;
+  width: 568px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 55px;
+  text-align: left;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
 
-  display: none;
+.interested-form.hide {
+  top: -420px;
+}
+
+.form-row {
+  margin-top: 0;
+  margin-bottom: 29px;
+  position: relative;
+}
+
+.form-row label {
+  display: flex;
+  align-items: center;
+}
+
+.form-row span {
+  width: 112px;
+  letter-spacing: 0.3px;
+}
+
+.form-row .icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  opacity: 0.3;
+}
+
+.form-row .icon:hover {
+  opacity: 1;
+}
+
+.form-row .icon:active path {
+  fill: #81b3d2;
+}
+
+.form-row.two-columns {
+  margin-top: 1px;
+  display: flex;
+}
+
+.form-row.two-columns span {
+  letter-spacing: -0.1px;
+}
+
+.form-row.two-columns label {
+  flex: 1 1 50%;
+}
+
+.arrival-date input,
+.departure-date input {
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  padding-left: 13px;
 }
 
 .interested-form input,
 .interested-form button:not(.interested-submit) {
   border: none;
   background-color: #f2f2f2;
+  height: 38px;
+  flex-grow: 1;
+}
+
+.interested-form input:hover {
+  background-color: #ebebeb
+}
+
+.interested-form input:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #e5e5e5;
+}
+
+.adults input,
+.children input {
+  width: 20px;
+  text-align: center;
 }
 
 .interested-form input,
@@ -336,14 +437,34 @@ a {
 .adults button,
 .children button {
   color: #a9a9a9;
+  font-size: 25px;
+}
+
+.adults button:hover,
+.children button:hover {
+  color: #000;
+}
+
+.adults button:active,
+.children button:active {
+  color: #81b3d2;
+}
+
+.children span {
+  padding-left: 50px;
 }
 
 .interested-submit {
   background-color: #81b3d2;
   font-size: 21px;
   line-height: 26px;
+  padding: 17px 0;
+  margin-top: 24px;
 }
 
+.interested-submit:hover {
+  background-color: #669ec0;
+}
 
 /* Map */
 
@@ -493,6 +614,7 @@ a {
 .checkbox-item label {
   position: relative;
   padding-left: 40px;
+  cursor: pointer;
 }
 
 input[type="checkbox"] + label:before {
@@ -511,9 +633,13 @@ input[type="checkbox"]:checked + label:before {
   background-image: url(../img/checkbox-on.svg);
 }
 
+input[type="checkbox"]:disabled + label {
+  opacity: 0.5;
+}
+
 .cost {
   margin-left: auto;
-  min-width: 318px;
+  min-width: 317px;
 }
 
 .cost h3 {
@@ -525,6 +651,7 @@ input[type="checkbox"]:checked + label:before {
   padding: 5px;
   border: 2px solid #fff;
   border-radius: 3px;
+  margin-left: -1px;
 }
 
 .cost-limits span {
@@ -545,13 +672,45 @@ input[type="checkbox"]:checked + label:before {
   width: 4px;
   height: 4px;
   padding: 0;
-  border: 10px solid #fff;
+  border: 8px solid #fff;
   border-radius: 50%;
+  background-color: #ababab;
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.range-switch:hover {
+  transform: scale(1.1);
+}
+
+.cost-range-outer {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 20px 0;
+}
+
+.cost-range-inner {
+  width: 86%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
 }
 
 .search-filters-button {
   border:2px solid #fff;
+  border-radius: 3px;
   background-color: transparent;
+  margin: 12px 0 0 84px;
+  padding: 7px 34px;
+  letter-spacing: 0.3px;
+}
+
+.search-filters-button:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 /* Hotels */
