@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
-
-    <link rel="stylesheet" href="css/style.css">
+		
+		<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body>
@@ -35,13 +36,13 @@
 							
 							<ul class="checkbox-list">
 								<li class="checkbox-item">
-									<input type="checkbox" id="inf1" checked><label for="inf1">Бассейн</label>
+									<input type="checkbox" id="inf1" name="pool" checked class="visually-hidden"><label for="inf1">Бассейн</label>
 								</li>
 								<li class="checkbox-item">
-									<input type="checkbox" id="inf2"><label for="inf2">Парковка</label>
+									<input type="checkbox" id="inf2" name="parking" class="visually-hidden"><label for="inf2">Парковка</label>
 								</li>
 								<li class="checkbox-item">
-									<input type="checkbox" id="inf3"><label for="inf3">wi-fi</label>
+									<input type="checkbox" id="inf3" name="wi-fi" class="visually-hidden"><label for="inf3">wi-fi</label>
 								</li>
 							</ul>
 						</fieldset>
@@ -53,13 +54,13 @@
 			
 							<ul class="checkbox-list">
 								<li class="checkbox-item">
-									<input type="checkbox" id="type1" checked><label for="type1">Гостиница</label>
+									<input type="checkbox" id="type1" name="hotel" checked class="visually-hidden"><label for="type1">Гостиница</label>
 								</li>
 								<li class="checkbox-item">
-									<input type="checkbox" id="type2" checked><label for="type2">Мотель</label>
+									<input type="checkbox" id="type2" name="motel" checked class="visually-hidden"><label for="type2">Мотель</label>
 								</li>
 								<li class="checkbox-item">
-									<input type="checkbox" id="type3" checked><label for="type3">Апартаменты</label>
+									<input type="checkbox" id="type3" name="apartments" checked class="visually-hidden"><label for="type3">Апартаменты</label>
 								</li>
 							</ul>
 						</fieldset>
@@ -89,11 +90,11 @@
 			
 					<div class="sorting">
 						<b>Найдено: 3</b>
+						<p>Сортировка:</p>
 						<ul class="sorting-types">
-							Сортировка:
-							<li class="sorting-type active">По цене</li>
-							<li class="sorting-type">По типу</li>
-							<li class="sorting-type">По рейтингу</li>
+							<li class="sorting-type active"><a href="#">По цене</a></li>
+							<li class="sorting-type"><a href="#">По типу</a></li>
+							<li class="sorting-type"><a href="#">По рейтингу</a></li>
 						</ul>
 						<div class="sorting-directions">
 							<div class="sorting-direction">
