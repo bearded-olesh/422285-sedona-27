@@ -1,7 +1,9 @@
-var btn = document.querySelector('.interested-button');
-
-btn.addEventListener('click', function () {
+document.addEventListener('DOMContentLoaded', function() {
+	var btn = document.querySelector('.interested-button');
 	var form = document.querySelector('.interested-form');
+	form.classList.add('hide');
 
-	form.classList.toggle('hide');
+	btn.addEventListener('click', function () {
+		form.classList.toggle('hide');
+	});
 });
